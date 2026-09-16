@@ -1,4 +1,9 @@
+$content = @'
 # W2-PM1: Footprinting and Reconnaissance
+
+## Author
+
+**Priyanka Behera**
 
 ## Project Overview
 
@@ -97,7 +102,9 @@ dnsrecon -d networkwalks.com | tee outputs/dnsrecon.txt
 
 ## Detailed Findings
 
-### WHOIS Findings
+### 1. WHOIS Findings
+
+**Tool used:** `whois`
 
 The WHOIS lookup identified:
 
@@ -114,7 +121,13 @@ The WHOIS lookup identified:
 
 The registrant information was privacy-protected.
 
-### WhatWeb Findings
+![WHOIS lookup](screenshots/task1-whois.png)
+
+---
+
+### 2. WhatWeb Findings
+
+**Tool used:** `whatweb`
 
 WhatWeb identified the following publicly visible technologies and characteristics:
 
@@ -125,23 +138,35 @@ WhatWeb identified the following publicly visible technologies and characteristi
 - Bootstrap 7.1
 - Google Tag Manager
 - HTML5
-- HTTPS redirection from HTTP (301 → 200)
+- HTTPS redirection from HTTP (301 -> 200)
 - Website title: `Networkwalks Academy`
 - Publicly detected IP address: `192.232.216.135`
 
 Technology detection does not automatically indicate a vulnerability. It only identifies information exposed by the website.
 
-### NSLookup Findings
+![WhatWeb scan](screenshots/task2-whatweb.png)
+
+---
+
+### 3. NSLookup Findings
+
+**Tool used:** `nslookup`
 
 The domain resolved to:
 
 ```text
-networkwalks.com → 192.232.216.135
+networkwalks.com -> 192.232.216.135
 ```
 
 The response was non-authoritative and was received through the configured DNS resolver.
 
-### cURL Header Findings
+![NSLookup resolution](screenshots/task3-nslookup.png)
+
+---
+
+### 4. cURL Header Findings
+
+**Tool used:** `curl`
 
 The HTTPS response returned:
 
@@ -164,7 +189,13 @@ The `Link` header exposed WordPress REST API-related paths, including `/wp-json/
 
 The presence of a header or public endpoint does not by itself confirm a security weakness.
 
-### WAFW00F Findings
+![cURL header inspection](screenshots/task4-curl.png)
+
+---
+
+### 5. WAFW00F Findings
+
+**Tool used:** `wafw00f`
 
 WAFW00F reported:
 
@@ -176,7 +207,13 @@ The tool used two requests for fingerprinting.
 
 This indicates that the website is likely protected by ModSecurity. The result does not provide confirmation about the WAF's rule configuration, coverage, or effectiveness.
 
-### DNSRecon Findings
+![WAFW00F detection](screenshots/task5-wafw00f.png)
+
+---
+
+### 6. DNSRecon Findings
+
+**Tool used:** `dnsrecon`
 
 DNSRecon identified the following records:
 
@@ -203,6 +240,8 @@ DNSRecon also reported the DNS software version:
 
 This was recorded as an observed information disclosure. It was not treated as proof of a vulnerability.
 
+![DNSRecon enumeration](screenshots/task6-dnsrecon.png)
+
 ---
 
 ## Security Considerations
@@ -223,9 +262,7 @@ These observations should be reviewed by the system owner to ensure that only ne
 
 ## Evidence
 
-Command outputs are stored in the `outputs/` directory.
-
-Screenshots of the terminal commands and results are stored in the `screenshots/` directory.
+Command outputs are stored in the `outputs/` directory. Screenshots are embedded above next to each finding, and are also stored individually in the `screenshots/` directory.
 
 ### Output Files
 
@@ -236,16 +273,6 @@ Screenshots of the terminal commands and results are stored in the `screenshots/
 - `outputs/wafw00f.txt`
 - `outputs/dnsrecon.txt`
 
-### Screenshots
-
-- `screenshots/task0-environment-setup.png` — environment and tool verification
-- `screenshots/task1-whois.png` — WHOIS lookup
-- `screenshots/task2-whatweb.png` — WhatWeb scan
-- `screenshots/task3-nslookup.png` — NSLookup resolution
-- `screenshots/task4-curl.png` — cURL header inspection
-- `screenshots/task5-wafw00f.png` — WAFW00F detection
-- `screenshots/task6-dnsrecon.png` — DNSRecon enumeration
-
 ---
 
 ## Conclusion
@@ -253,27 +280,7 @@ Screenshots of the terminal commands and results are stored in the `screenshots/
 This practical demonstrated how multiple Kali Linux reconnaissance tools can be used to collect publicly available information about a domain.
 
 The exercise identified domain metadata, web technologies, DNS information, HTTP headers, and a ModSecurity WAF. The findings were limited to footprinting and reconnaissance, and no exploitation or intrusive testing was performed.
+'@
 
-## Screenshot Gallery
-
-**Environment and tool verification**
-![Environment setup](screenshots/task0-environment-setup.png)
-
-**WHOIS lookup**
-![WHOIS lookup](screenshots/task1-whois.png)
-
-**WhatWeb scan**
-![WhatWeb scan](screenshots/task2-whatweb.png)
-
-**NSLookup resolution**
-![NSLookup resolution](screenshots/task3-nslookup.png)
-
-**cURL header inspection**
-![cURL headers](screenshots/task4-curl.png)
-
-**WAFW00F detection**
-![WAFW00F detection](screenshots/task5-wafw00f.png)
-
-**DNSRecon enumeration**
-![DNSRecon enumeration](screenshots/task6-dnsrecon.png)
-
+Set-Content -Path README.md -Value $content -Encoding UTF8
+Write-Host "README.md rewritten successfully."
