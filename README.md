@@ -253,3 +253,27 @@ Screenshots of the terminal commands and results are stored in the `screenshots/
 This practical demonstrated how multiple Kali Linux reconnaissance tools can be used to collect publicly available information about a domain.
 
 The exercise identified domain metadata, web technologies, DNS information, HTTP headers, and a ModSecurity WAF. The findings were limited to footprinting and reconnaissance, and no exploitation or intrusive testing was performed.
+
+## Screenshot Gallery
+
+**Environment and tool verification**
+![Environment setup](screenshots/task0-environment-setup.png)
+
+**WHOIS lookup**
+![WHOIS lookup](screenshots/task1-whois.png)
+
+**WhatWeb scan**
+![WhatWeb scan](screenshots/task2-whatweb.png)
+
+**NSLookup resolution**
+![NSLookup resolution](screenshots/task3-nslookup.png)
+
+**cURL header inspection**
+![cURL headers](screenshots/task4-curl.png)
+
+**WAFW00F detection**
+![WAFW00F detection](screenshots/task5-wafw00f.png)
+
+**DNSRecon enumeration**
+![DNSRecon enumeration](screenshots/task6-dnsrecon.png)
+
