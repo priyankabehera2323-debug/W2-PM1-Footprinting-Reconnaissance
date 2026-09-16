@@ -1,0 +1,23 @@
+[*] Starting enumeration for domain: networkwalks.com
+[*] std: Performing General Enumeration against: networkwalks.com...
+[-] ERROR: No answer for DNSSEC query for networkwalks.com
+[*]  	 SOA ns6135.hostgator.com 50.87.144.87
+[*]  	 NS ns6136.hostgator.com 192.232.216.131
+[*]  	 Bind Version for 192.232.216.131 "9.16.23-RH"
+[*]  	 NS ns6135.hostgator.com 50.87.144.87
+[*]  	 Bind Version for 50.87.144.87 "9.16.23-RH"
+[*]  	 MX mail.networkwalks.com 192.232.216.135
+[*]  	 A networkwalks.com 192.232.216.135
+[*]  	 TXT networkwalks.com google-site-verification=rr04eRmqHoWY3XemnizDNVK4q75X-Ij-mjgEeg-UsYI
+[*]  	 TXT networkwalks.com v=spf1 +a +mx +ip4:50.87.144.87 +include:websitewelcome.com ~all
+[*] Enumerating SRV Records
+[*]  	 SRV _autodiscover._tcp.networkwalks.com cpanelemaildiscovery.cpanel.net 184.94.203.9 443
+[*]  	 SRV _autodiscover._tcp.networkwalks.com cpanelemaildiscovery.cpanel.net 184.94.204.15 443
+[*]  	 SRV _autodiscover._tcp.networkwalks.com cpanelemaildiscovery.cpanel.net 184.94.203.15 443
+[*]  	 SRV _autodiscover._tcp.networkwalks.com cpanelemaildiscovery.cpanel.net 184.94.204.11 443
+[*]  	 SRV _autodiscover._tcp.networkwalks.com cpanelemaildiscovery.cpanel.net 184.94.203.14 443
+[*]  	 SRV _autodiscover._tcp.networkwalks.com cpanelemaildiscovery.cpanel.net 184.94.204.14 443
+[*]  	 SRV _autodiscover._tcp.networkwalks.com cpanelemaildiscovery.cpanel.net 184.94.203.11 443
+[*]  	 SRV _autodiscover._tcp.networkwalks.com cpanelemaildiscovery.cpanel.net 184.94.204.9 443
+[*] 8 Records Found
+[*] Completed enumeration for domain: networkwalks.com

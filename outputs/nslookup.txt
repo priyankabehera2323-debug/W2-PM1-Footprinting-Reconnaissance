@@ -1,0 +1,6 @@
+Server:		10.138.131.135
+Address:	10.138.131.135#53
+
+Non-authoritative answer:
+Name:	networkwalks.com
+Address: 192.232.216.135

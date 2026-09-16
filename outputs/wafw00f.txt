@@ -1,0 +1,17 @@
+                ______
+               /      \
+              (  W00f!  )
+               \  ___  /
+                 |,'
+               ,'/
+             ,'  /
+           ,'   /
+          /___,'
+
+
+   ~ WAFW00F : v2.4.2 ~
+The Web Application Firewall Fingerprinting Toolkit
+
+[*] Checking https://networkwalks.com
+[+] The site https://networkwalks.com is behind ModSecurity (SpiderLabs) WAF.
+[~] Number of requests: 2
