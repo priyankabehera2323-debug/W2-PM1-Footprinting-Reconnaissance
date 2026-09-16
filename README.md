@@ -1,6 +1,4 @@
-
 # W2-PM1: Footprinting and Reconnaissance
-
 
 ## Project Overview
 
@@ -29,6 +27,32 @@ The objectives of this practical were to:
 4. Inspect HTTP response headers.
 5. Detect the presence of a Web Application Firewall.
 6. Enumerate publicly available DNS records.
+
+---
+
+## Repository Structure
+
+```text
+W2-PM1-Footprinting-Reconnaissance/
+├── outputs/
+│   ├── whois.txt
+│   ├── whatweb.txt
+│   ├── nslookup.txt
+│   ├── curl-headers.txt
+│   ├── wafw00f.txt
+│   └── dnsrecon.txt
+├── screenshots/
+│   ├── task0-environment-setup.png
+│   ├── task1-whois.png
+│   ├── task2-whatweb.png
+│   ├── task3-nslookup.png
+│   ├── task4-curl.png
+│   ├── task5-wafw00f.png
+│   └── task6-dnsrecon.png
+├── notes/
+│   └── methodology.md
+└── README.md
+```
 
 ---
 
@@ -277,7 +301,3 @@ Command outputs are stored in the `outputs/` directory. Screenshots are embedded
 This practical demonstrated how multiple Kali Linux reconnaissance tools can be used to collect publicly available information about a domain.
 
 The exercise identified domain metadata, web technologies, DNS information, HTTP headers, and a ModSecurity WAF. The findings were limited to footprinting and reconnaissance, and no exploitation or intrusive testing was performed.
-'@
-
-Set-Content -Path README.md -Value $content -Encoding UTF8
-Write-Host "README.md rewritten successfully."
