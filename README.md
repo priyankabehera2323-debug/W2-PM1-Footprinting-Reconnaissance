@@ -1,9 +1,6 @@
 
 # W2-PM1: Footprinting and Reconnaissance
 
-## Author
-
-**Priyanka Behera**
 
 ## Project Overview
 
